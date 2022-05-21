@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Open+Sans&display=swap');
+:root{
+    --bg: #130a1f;
+    --bg-cards: #1a0b2c;
+    --bg-button: #9046b7;
+    --bg-button-2: #2ae6f1;
+    --letter-link : #00b4eb;
+    --shadow-nav: 0 2px 1px  rgba(0,0,0,.5); 
+    --shadow-card: 10px 10px 15px rgba(0,0,0,.4);
+    --color: white;
+    --color-letter-footer: rgb(137, 126, 161);
+    --border: black;
+}
+body{
+    background: var(--bg);
+    font-family: open sans;
+    color: var(--color);
+}
+/* ===================  reusable styles ================== */
+.f-right{
+    float: right;
+}
+.paragraph{
+    font-size: 12px;
+}
+.mb-1{
+    margin-bottom: 1em;
+}
+.mt-1{
+    margin-top: 1em;
+}
+.mt-3{
+    margin-top: 3em;
+}
+.mt-5{
+    margin-top: 5em;
+}
+.mr-1{
+    margin-right: 1em;
+}
+.p-1{
+    padding: 0 2em;
+}
+.t-align-l{
+    text-align: left;
+}
+.t-align-c{
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.around{
+    justify-content: space-around;
+}
+.between{
+    justify-content: space-between;
+}
+.center{
+    justify-content: center;
+}
+.a-items{
+    align-items: center;
+}
+.flex-1{
+    flex: 1;
+}
+.d-block{
+    display: block;
+}
+.w-50{
+    width: 50%;
+}
+.w-100{
+    width: 100%;
+}
+.wrapper{
+    max-width: 1240px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid, .grid-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.title{
+    font-size: 2.5em;
+    margin-top: 0;
+}
+.title-1{
+    font-size: 3em;
+    font-weight: 900;
+}
+.p-title{
+    font-size: 1em;
+    color: var(--color);
+}
+.link{
+    color: var(--letter-link);
+}
+.link-2{
+    text-decoration: none;
+    color: var(--color-letter-footer);
+    display: block;
+}
+.tam-img-75{
+    width: 75px;
+}
+.tam-img-25{
+    width: 25px;
+}
+.tam-img-10{
+    width: 10px;
+}
+/* ===================    buttons   ====================== */
+.button-container{
+    background: linear-gradient(90deg, var(--bg-button), var(--bg-button-2));
+    border-radius: .25em ;
+}
+
+.button-liqudity, .button, .button-whitdral{
+    background: var(--bg-button);
+    border: none;
+    color: var(--color);
+    border-radius: .25em;
+    font-weight: 600;
+    padding-top: .5em;
+    cursor: pointer;
+}
+.button{
+    background: transparent;
+    padding: .5em .75em;
+    width: 100%;
+}
+.button-farming{
+    background: transparent;
+    color: var(--color);
+    padding: .5em;
+    border-radius: 2em;
+    border: 1px solid var(--color);
+}
+.button-whitdral{
+    background: var(--bg-button-2);
+    padding: .5em .75em;
+}
+/* ===================  styles menu ====================== */
+.navbar{
+    box-shadow: var(--shadow-nav);
+    background: var(--bg);
+    position: relative;
+    padding: .5em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 5vw;
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .5px;
+    background: rgb(32, 25, 46);
+}
+.menu-icon{
+    margin-right: 1em;
+    /* display: block; */
+}
+.menu{
+    display: none;
+    text-align: center; 
+    padding: .75em .5em; 
+    transition: height .3s;
+    margin: 0;
+}
+.container-button{
+    display: none;
+    padding-left: 1em;
+}
+.menu.active{
+    border-top: 1px solid var(--letter-link);
+    display: block;
+    background-color: var(--bg);
+}
+.menu.active + .container-button{
+    display: block;
+    background: var(--bg);
+}
+
+.menu-item{
+    list-style: none;
+    padding-bottom: .7em;
+    margin-right: 1em;
+}
+.menu-icon{
+    width: 6vw;
+}
+
+/* ==================  nav farming ===============*/
+
+.nav-farming{
+    background: var(--bg-cards);
+    padding: .75em 0;
+    border-radius: 2em;
+    border: 2px solid var(--border);
+}
+.img-meal{
+    width: 30px;
+}
+
+
+/* ================ products farming ============= */
+.product-farming{
+    justify-items: center;
+}
+.card{
+    background: var(--bg-cards);
+    border-radius: .5em;
+    width: 100%; 
+    box-shadow: var(--shadow-card);
+    padding: .5em 1em;
+    /* border: 1px solid var(--border); */
+
+}
+.img-animal{
+    width: 80px;
+}
+/* ========================= selectbox ====================== */
+.selectbox{
+   
+    background-color: var(--bg-cards);
+    color: var(--color);
+    width: 100%;
+    border-radius: .5em;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    padding: 1em;
+    border: 1px solid var(--border);
+ }
+ 
+ /* =============== input copy =============== */
+ .group-refer{
+     position: relative;
+ }
+ .input-refer {
+    background: var(--bg-cards);
+    padding: 1em 3em ;
+    border-radius: 2em;
+    border: 2px solid var(--border);
+    color: var(--letter-link); 
+ }
+
+ .label-refer{
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ .input-refer:focus{
+     outline: none;
+ }
+.input-refer::moz-selection{
+    background: transparent;
+}
+.input-refer::selection{
+    background: transparent;
+}
+.message{
+   color: var(--letter-link);
+   background: rgb(0,0,0,.5); 
+   padding: .5em;
+   border-radius: .5em;
+   position: absolute;
+   bottom: -55px;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: background .5s;
+}
+.message::before{
+    content: "\02714";
+    margin-right: 1rem;
+}
+.reddit, .telegram, .twitter{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+ }
+ .clipboard{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: 20px;
+     
+ }
+ .clipboard:hover{
+     color: var(--letter-link);
+ }
+
+.block{
+    background: var(--bg-cards);
+    box-shadow: var(--shadow-card);
+    border-radius: 1em;
+    width: 100%;
+    justify-items: center;
+    padding: .25em 0;
+    border: 1px solid var(--border);
+}
+/* ================ footer ===================== */
+.line{
+    height: 3px;
+    background: linear-gradient( 90deg,var(--bg-button), var(--bg-button-2));
+}
+
+.footer{
+    background: var(--bg-cards);
+    color: var(--color-letter-footer);
+    font-size: 0.8em;
+    text-align: center;
+}
+.layout-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph-footer{
+    letter-spacing: 4px;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+}
+.group{
+    position: relative;
+}
+.group label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top .3s, font-size .3s;
+    
+    /* top: -16px; */
+}
+.input{
+    background-color: transparent;
+    padding: .5em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: .25em;
+    width: 100%;
+    color: var(--color);
+    /* text-align: center; */
+}
+.input:focus{
+    outline: none;
+    border-bottom-color: var(--bg);
+}
+.input:focus + label,
+.input:valid + label{
+    top: -14px;
+    font-size: 12px;
+    color: var(--color);
+}
+
+@media screen and (min-width: 1024px){
+    .menu-icon{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;;
+        padding: 0; 
+    }
+    .menu-item{
+        padding-bottom: 0;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container-button{
+        display: flex;
+        align-items: center;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-2{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .card{
+        max-width: 400px;
+    }
+    .input-refer{
+        padding: 1em 9em;
+    }
+    .label-refer{
+        display: block;
+    }
+    .telegram{
+        display: block;
+        right: 90px; 
+    }
+     .reddit{
+        display: block;
+         right: 60px;
+    }
+     .twitter{
+        display: block;
+         right: 30px;
+    }
+    .clipboard{
+        right: 120px;
+    }
+    .layout-footer{
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    .line-2{
+        width: 50%;
+        height: 3px;
+        border-radius: .25em;
+        background: var(--color);
+    }
+    .footer{
+        text-align: left;
+    }
+}
